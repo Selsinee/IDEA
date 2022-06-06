@@ -3,7 +3,7 @@
     <style name="Theme.IDEA" parent="@style/Theme.AppCompat.Light">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/green</item>
-        <item name="colorPrimaryVariant">@color/darkGreen</item>
+        <item name="colorPrimaryVariant">@color/green</item>
         <item name="colorOnPrimary">@color/blackGrey</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/beige</item>
@@ -21,7 +21,7 @@
     </style>
 
     <style name="CustomActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">
-        <item name="background">@drawable/actionbar_foreground</item>
+        <item name="background">@drawable/actionbar_background</item>
         <item name="titleTextStyle">@style/ActionBar.TitleTextStyle</item>
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="titleCentered">true</item>
@@ -31,9 +31,25 @@
 
     <style name="ActionBar.TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="font">@font/poppins_semibold</item>
-        <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:gravity">center_horizontal</item>
         <item name="android:textColor">@color/blackGrey</item>
         <item name="android:textSize">20sp</item>
     </style>
+
+    <style name="Theme.IDEA.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.IDEA.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="titleTextStyle">@style/ActionBar.TitleTextStyle</item>
+        <item name="android:titleTextStyle">@style/ActionBar.TitleTextStyle</item>
+        <item name="colorControlNormal">@color/blackGrey</item>
+        <item name="color">@color/blackGrey</item>
+    </style>
+
+    <style name="Theme.IDEA.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" >
+        <item name="titleTextStyle">@style/ActionBar.TitleTextStyle</item>
+        <item name="android:titleTextStyle">@style/ActionBar.TitleTextStyle</item>
+    </style>
+
 </resources>

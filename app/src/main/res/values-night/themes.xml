@@ -21,7 +21,7 @@
     </style>
 
     <style name="CustomActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">
-        <item name="background">@drawable/actionbar_foreground</item>
+        <item name="background">@drawable/actionbar_background</item>
         <item name="titleTextStyle">@style/ActionBar.TitleTextStyle</item>
         <item name="android:titleTextStyle">@style/ActionBar.TitleTextStyle</item>
     </style>

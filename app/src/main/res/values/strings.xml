@@ -15,4 +15,11 @@
     <string name="menu_about_us">About Us</string>
     <string name="menu_logout">Log Out</string>
     <string name="text_recommended">Recommended</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="idea_facebook">IDEA Furniture F.D.S.R.</string>
+    <string name="idea_instagram">/@idea_furniture_fdsr</string>
+    <string name="idea_web">www.ideafurniture-fdsr.com</string>
+    <string name="idea_copyright">© 2022 | F.D.S.R. IDEAfurniture</string>
+    <string name="about_paragraph">    Our application certainly provides a variety of products that can help, facilitate your activities for the better. For example, Sofa Couch: Hemligby which can provide comfort when sitting and recommended to be placed in the family room. This is because this product is made of high-quality materials that can certainly give a calm vibe when having a conversation with family.</string>
 </resources>

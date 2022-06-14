@@ -1,8 +1,10 @@
-package com.binus.idea;
+package com.binus.idea.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.binus.idea.R;
 
 public class LoginActivity extends AppCompatActivity {
 

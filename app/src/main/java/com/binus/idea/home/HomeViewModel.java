@@ -1,4 +1,4 @@
-package com.binus.idea.ui.home;
+package com.binus.idea.home;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

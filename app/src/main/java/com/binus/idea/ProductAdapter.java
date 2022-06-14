@@ -15,8 +15,8 @@ import java.util.ArrayList;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder> {
 
-    private ArrayList<Product> dataSet;
-    private Context mContext;
+    private final ArrayList<Product> dataSet;
+    private final Context mContext;
 
     public ProductAdapter(ArrayList<Product> data, Context context){
         dataSet = data;

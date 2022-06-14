@@ -13,6 +13,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.binus.idea.databinding.ActivityMainBinding;
+import com.binus.idea.login.LoginActivity;
 import com.google.android.material.navigation.NavigationView;
 
 

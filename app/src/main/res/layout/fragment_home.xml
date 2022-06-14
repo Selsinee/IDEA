@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".home.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -41,7 +41,7 @@
                 android:paddingVertical="16dp"
                 android:layout_gravity="center"
                 android:autoStart="true"
-                android:flipInterval="3000" />
+                android:flipInterval="5000" />
 
         </androidx.cardview.widget.CardView>
 

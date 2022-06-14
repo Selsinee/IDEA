@@ -1,4 +1,4 @@
-package com.binus.idea.ui.home;
+package com.binus.idea.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 
@@ -59,7 +58,7 @@ public class HomeFragment extends Fragment {
         binding.recommendedProducts.setLayoutManager(new GridLayoutManager(getContext(), 2));
     }
 
-    private void populateData(){
+    private void populateData() {
         products.add(new Product("Hemlingby", "Rp. 1.875.000", R.drawable.hemlingby));
         products.add(new Product("Strandmon", "Rp. 2.000.000", R.drawable.strandmon));
         products.add(new Product("Malm", "Rp. 3.500.000", R.drawable.malm));

@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.binus.idea.ui.home.HomeFragment"
+        android:name="com.binus.idea.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_products"
-        android:name="com.binus.idea.ui.products.ProductsFragment"
+        android:name="com.binus.idea.products.ProductsFragment"
         android:label="@string/menu_products"
         tools:layout="@layout/fragment_products" />
 
     <fragment
         android:id="@+id/nav_about_us"
-        android:name="com.binus.idea.ui.aboutus.AboutUsFragment"
+        android:name="com.binus.idea.aboutus.AboutUsFragment"
         android:label="@string/menu_about_us"
         tools:layout="@layout/fragment_about_us" />
 

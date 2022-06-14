@@ -1,5 +1,7 @@
 package com.binus.idea.home;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,8 +41,13 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        SharedPreferences sp = requireContext().getSharedPreferences("IDEAData", Context.MODE_PRIVATE);
+        homeViewModel.setText(sp.getString("username", ""));
+
         final TextView textView = binding.greetingMessage;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), s -> textView.setText(s));
+        homeViewModel.getText().observe(getViewLifecycleOwner(), s -> {
+            textView.setText(getString(R.string.welcome_message, s));
+        });
 
         return root;
     }

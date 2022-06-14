@@ -1,9 +1,12 @@
 package com.binus.idea;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -39,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.nav_home, R.id.nav_products, R.id.nav_about_us)
                 .setDrawerLayout(drawer)
                 .build();
+
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_home);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
@@ -46,12 +50,15 @@ public class MainActivity extends AppCompatActivity {
         MenuItem logOutItem = navigationView.getMenu().findItem(R.id.nav_logout);
         logOutItem.setOnMenuItemClickListener(item -> {
             //Navigate to Login
-            Log.d("<TAG>", "Log out");
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
             finish();
             return true;
         });
+
+        SharedPreferences sp = getSharedPreferences("IDEAData", Context.MODE_PRIVATE);
+        TextView textView = binding.navView.getHeaderView(0).findViewById(R.id.drawer_username);
+        textView.setText(sp.getString("username", ""));
     }
 
     @Override

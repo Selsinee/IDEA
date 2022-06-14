@@ -1,17 +1,14 @@
 package com.binus.idea.aboutus;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import com.binus.idea.R;
-import com.binus.idea.databinding.FragmentAboutUsBinding;
 import com.binus.idea.databinding.FragmentAboutUsDetailBinding;
 
 import org.jetbrains.annotations.NotNull;

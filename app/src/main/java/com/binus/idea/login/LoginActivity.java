@@ -1,14 +1,11 @@
 package com.binus.idea.login;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.binus.idea.MainActivity;
 import com.binus.idea.R;
@@ -31,18 +28,18 @@ public class LoginActivity extends AppCompatActivity {
             String password = binding.passwordField.getText().toString();
 
             if (username.equals("")) {
-                binding.errorMessage.setText("username must not be empty");
+                binding.errorMessage.setText(getString(R.string.username_empty_error_message));
                 binding.errorMessage.setVisibility(View.VISIBLE);
                 return;
             }
-            if (username.length() < 8 || username.length()>24){
-                binding.errorMessage.setText("username must be between 8-24");
+            if (username.length() < 8 || username.length() > 24) {
+                binding.errorMessage.setText(getString(R.string.username_length_error_message));
                 binding.errorMessage.setVisibility(View.VISIBLE);
                 return;
             }
 
-            if (password.equals("")){
-                binding.errorMessage.setText("password must not be empty");
+            if (password.equals("")) {
+                binding.errorMessage.setText(getString(R.string.password_error_message));
                 binding.errorMessage.setVisibility(View.VISIBLE);
                 return;
             }

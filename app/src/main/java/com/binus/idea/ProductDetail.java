@@ -1,13 +1,10 @@
 package com.binus.idea;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
-import android.os.Bundle;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.ImageView;
 import com.binus.idea.databinding.ProductDetailBinding;
 
 import java.util.Objects;
@@ -16,9 +13,8 @@ public class ProductDetail extends AppCompatActivity {
 
     private ProductDetailBinding binding;
 
-
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ProductDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -30,31 +26,28 @@ public class ProductDetail extends AppCompatActivity {
             String inp = binding.quant.getText().toString();
             int quantity = Integer.parseInt(inp);
 
-            if(quantity > 0){
+            if (quantity > 0) {
                 successDialog();
-            }
-            else{
+            } else {
                 failDialog();
             }
         });
     }
 
-    void failDialog(){
+    void failDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Quantity is Empty, Unable to Purchase")
-                .setPositiveButton("Return", (dialog, id) -> {
-                });
-        // Create the AlertDialog object and return it
+                .setPositiveButton("Return", (dialog, id) -> dialog.dismiss());
+
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
 
-    void successDialog(){
+    void successDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Transaction Success")
-                .setPositiveButton("OK", (dialog, id) -> {
-                });
-        // Create the AlertDialog object and return it
+                .setPositiveButton("OK", (dialog, id) -> finish());
+
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }

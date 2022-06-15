@@ -34,18 +34,12 @@ public class ProductDetail extends AppCompatActivity {
                 failDialog();
             }
         });
-
-
-
-
-
-
     }
 
     void failDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("empty")
-                .setPositiveButton("ok", (dialog, id) -> {
+        builder.setMessage("Quantity is Empty, Unable to Purchase")
+                .setPositiveButton("OK", (dialog, id) -> {
                 });
         // Create the AlertDialog object and return it
         AlertDialog alertDialog = builder.create();
@@ -54,8 +48,8 @@ public class ProductDetail extends AppCompatActivity {
 
     void successDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Success")
-                .setPositiveButton("ok", (dialog, id) -> {
+        builder.setMessage("Transaction Success")
+                .setPositiveButton("OK", (dialog, id) -> {
                 });
         // Create the AlertDialog object and return it
         AlertDialog alertDialog = builder.create();

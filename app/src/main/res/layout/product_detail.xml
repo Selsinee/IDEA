@@ -97,6 +97,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="676dp"
         android:background="@drawable/button_image"
+        android:text="Buy Now"
         android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/Theme.IDEA.PopupOverlay"

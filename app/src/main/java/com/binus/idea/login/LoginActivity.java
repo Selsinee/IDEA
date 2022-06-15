@@ -44,26 +44,26 @@ public class LoginActivity extends AppCompatActivity {
             String password = binding.passwordField.getText().toString();
             //TODO: Validations
             if (username.equals("")) {
-                Toast.makeText(getApplicationContext(), "username must not be empty",
-                        Toast.LENGTH_LONG).show();
-
+                binding.errorMessage.setText("username must not be empty");
+                binding.errorMessage.setVisibility(View.VISIBLE);
                 return;
             }
             if (username.length() < 8 || username.length()>24){
-                Toast.makeText(getApplicationContext(), "username must be between 8-24",
-                        Toast.LENGTH_LONG).show();
+                binding.errorMessage.setText("username must be between 8-24");
+                binding.errorMessage.setVisibility(View.VISIBLE);
 
                 return;
             }
 
 
             if (password.equals("")){
-                Toast.makeText(getApplicationContext(), "password must not be empty",
-                        Toast.LENGTH_LONG).show();
+                binding.errorMessage.setText("password must not be empty");
+                binding.errorMessage.setVisibility(View.VISIBLE);
 
                 return;
             }
 
+            binding.errorMessage.setVisibility(View.GONE);
             //Store username in shared pref so that other activities and fragments can access easily
             SharedPreferences sharedPreferences = getSharedPreferences("IDEAData", MODE_PRIVATE);
             SharedPreferences.Editor edit = sharedPreferences.edit();

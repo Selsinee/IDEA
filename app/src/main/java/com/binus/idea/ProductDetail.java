@@ -14,6 +14,7 @@ public class ProductDetail extends AppCompatActivity {
 
     private ProductDetailBinding binding;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -23,10 +24,15 @@ public class ProductDetail extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         binding.buybutton.setOnClickListener(v -> {
+            String inp = binding.quant.getText().toString();
+            int quantity = Integer.parseInt(inp);
 
-            failDialog();
-
-            //successDialog();
+            if(quantity > 0){
+                successDialog();
+            }
+            else{
+                failDialog();
+            }
         });
 
 

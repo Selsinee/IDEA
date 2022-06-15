@@ -39,7 +39,7 @@ public class ProductDetail extends AppCompatActivity {
     void failDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Quantity is Empty, Unable to Purchase")
-                .setPositiveButton("OK", (dialog, id) -> {
+                .setPositiveButton("Return", (dialog, id) -> {
                 });
         // Create the AlertDialog object and return it
         AlertDialog alertDialog = builder.create();

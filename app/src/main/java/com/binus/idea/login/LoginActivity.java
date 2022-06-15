@@ -41,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
            // });
 
             String username = binding.usernameField.getText().toString();
+            String password = binding.passwordField.getText().toString();
             //TODO: Validations
             if (username.equals("")) {
                 Toast.makeText(getApplicationContext(), "username must not be empty",
@@ -56,6 +57,12 @@ public class LoginActivity extends AppCompatActivity {
             }
 
 
+            if (password.equals("")){
+                Toast.makeText(getApplicationContext(), "password must not be empty",
+                        Toast.LENGTH_LONG).show();
+
+                return;
+            }
 
             //Store username in shared pref so that other activities and fragments can access easily
             SharedPreferences sharedPreferences = getSharedPreferences("IDEAData", MODE_PRIVATE);

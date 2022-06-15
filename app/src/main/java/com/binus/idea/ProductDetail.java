@@ -1,31 +1,59 @@
 package com.binus.idea;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.ImageView;
+import com.binus.idea.databinding.ProductDetailBinding;
 
 public class ProductDetail extends AppCompatActivity {
-    TextView price;
-    ImageView photos;
-    TextView title;
-    Button buy;
+
+    private ProductDetailBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.product_detail);
-//        title = findViewById();
-//        photos = findViewById();
-//        price = findViewById();
-        //(.....).setOnClickListener(v -> {
-        //  Product product = com.binus.idea.Product.getInstance();
-        //  product.setData(product_name);
-        //  product.setData(product_image);
-        //  product.setData(product_price);
-        //  (.....).setText(product.getData());
-        //}
+
+
+        binding = ProductDetailBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        binding.buybutton.setOnClickListener(v -> {
+
+            failDialog();
+
+            //successDialog();
+        });
+
+
+
+
+
 
     }
+
+    void failDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("empty")
+                .setPositiveButton("ok", (dialog, id) -> {
+                });
+        // Create the AlertDialog object and return it
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
+    void successDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Success")
+                .setPositiveButton("ok", (dialog, id) -> {
+                });
+        // Create the AlertDialog object and return it
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
 }

@@ -1,5 +1,7 @@
 package com.binus.idea.aboutus;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,5 +65,24 @@ public class AboutUsDetailFragment extends Fragment {
             binding.contentText.setVisibility(View.GONE);
             binding.socialMediaTab.setVisibility(View.VISIBLE);
         }
+
+        binding.facebook.setOnClickListener(v -> {
+            Uri uri = Uri.parse("http://www.facebook.com");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        });
+
+        binding.instagram.setOnClickListener(v -> {
+            Uri uri = Uri.parse("http://www.instagram.com");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        });
+
+        binding.website.setOnClickListener(v -> {
+            Uri uri = Uri.parse("http://www.google.com");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        });
+
     }
 }

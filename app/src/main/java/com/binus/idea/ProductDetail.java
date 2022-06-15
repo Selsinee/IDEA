@@ -16,9 +16,9 @@ public class ProductDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product_detail);
-        title = findViewById();
-        photos = findViewById();
-        price = findViewById();
+//        title = findViewById();
+//        photos = findViewById();
+//        price = findViewById();
         //(.....).setOnClickListener(v -> {
         //  Product product = com.binus.idea.Product.getInstance();
         //  product.setData(product_name);

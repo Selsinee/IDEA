@@ -28,9 +28,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="Hemlingby"
-            android:fontFamily="@font/poppins_semibold"
             android:textSize="14sp"
             android:textAllCaps="true"
+            android:textStyle="bold"
             />
 
         <TextView
@@ -38,7 +38,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="Rp. 1.875.000"
-            android:fontFamily="@font/poppins_medium"
             android:textSize="12sp"
             />
 

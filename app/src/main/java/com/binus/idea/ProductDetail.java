@@ -10,6 +10,8 @@ import android.widget.TextView;
 import android.widget.ImageView;
 import com.binus.idea.databinding.ProductDetailBinding;
 
+import java.util.Objects;
+
 public class ProductDetail extends AppCompatActivity {
 
     private ProductDetailBinding binding;
@@ -18,12 +20,13 @@ public class ProductDetail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-
-
         binding = ProductDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.buybutton.setOnClickListener(v -> {
+        setSupportActionBar(binding.toolbar);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+
+        binding.buyButton.setOnClickListener(v -> {
             String inp = binding.quant.getText().toString();
             int quantity = Integer.parseInt(inp);
 
@@ -56,4 +59,9 @@ public class ProductDetail extends AppCompatActivity {
         alertDialog.show();
     }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
+    }
 }

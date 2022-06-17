@@ -33,5 +33,10 @@
     <string name="password_error_message">password must not be empty</string>
     <string name="username_length_error_message">username must be between 8–24</string>
     <string name="username_empty_error_message">username must not be empty</string>
+    <string name="price_data">Rp. 2.000.000</string>
+    <string name="price_label">Price :</string>
+    <string name="products_quantuty_prompt">How many products do you want to buy?</string>
+    <string name="quantity_label">Quantity :</string>
+    <string name="buy_now_text">Buy Now</string>
 
 </resources>

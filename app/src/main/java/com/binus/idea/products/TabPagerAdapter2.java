@@ -24,15 +24,15 @@ public class TabPagerAdapter2 extends FragmentStateAdapter {
 
         switch(position){
             case 0: {
-                fragment = ProductsFragment.newInstance(TAB_LIVING_ROOM);
+                fragment = ProductListFragment.newInstance(TAB_LIVING_ROOM);
                 break;
             }
             case 1: {
-                fragment = ProductsFragment.newInstance(TAB_KITCHEN);
+                fragment = ProductListFragment.newInstance(TAB_KITCHEN);
                 break;
             }
             case 2:{
-                fragment = ProductsFragment.newInstance(TAB_BATHROOM);
+                fragment = ProductListFragment.newInstance(TAB_BATHROOM);
                 break;
             }
             default: {

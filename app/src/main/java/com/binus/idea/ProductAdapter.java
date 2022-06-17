@@ -15,12 +15,14 @@ import java.util.ArrayList;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder> {
 
+    private final OnItemClickedListener callback;
     private final ArrayList<Product> dataSet;
     private final Context mContext;
 
-    public ProductAdapter(ArrayList<Product> data, Context context){
+    public ProductAdapter(ArrayList<Product> data, Context context, OnItemClickedListener callback) {
         dataSet = data;
         mContext = context;
+        this.callback = callback;
     }
 
     @NonNull
@@ -37,6 +39,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         holder.binding.productImage.setImageResource(item.getImage());
         holder.binding.productName.setText(item.getName());
         holder.binding.productPrice.setText(item.getPrice());
+        holder.binding.itemCard.setOnClickListener(v -> callback.onClick(item));
     }
 
     @Override
@@ -50,7 +53,12 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         public ViewHolder(ProductItemBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
+
         }
 
+    }
+
+    public interface OnItemClickedListener {
+        void onClick(Product item);
     }
 }

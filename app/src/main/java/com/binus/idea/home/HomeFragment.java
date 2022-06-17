@@ -1,6 +1,7 @@
 package com.binus.idea.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -17,6 +18,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.binus.idea.Product;
 import com.binus.idea.ProductAdapter;
+import com.binus.idea.ProductDetail;
 import com.binus.idea.R;
 import com.binus.idea.databinding.FragmentHomeBinding;
 
@@ -24,14 +26,14 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements ProductAdapter.OnItemClickedListener {
 
     private HomeViewModel homeViewModel;
     private FragmentHomeBinding binding;
 
-    private ArrayList<Product> products = new ArrayList<>();
+    private final ArrayList<Product> products = new ArrayList<>();
 
-    int[] images = { R.drawable.hemlingby, R.drawable.strandmon, R.drawable.malm };
+    int[] images = {R.drawable.hemlingby, R.drawable.strandmon, R.drawable.malm};
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -45,9 +47,7 @@ public class HomeFragment extends Fragment {
         homeViewModel.setText(sp.getString("username", ""));
 
         final TextView textView = binding.greetingMessage;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), s -> {
-            textView.setText(getString(R.string.welcome_message, s));
-        });
+        homeViewModel.getText().observe(getViewLifecycleOwner(), s -> textView.setText(getString(R.string.welcome_message, s)));
 
         return root;
     }
@@ -60,8 +60,8 @@ public class HomeFragment extends Fragment {
         initAdapter();
     }
 
-    private void initAdapter(){
-        binding.recommendedProducts.setAdapter(new ProductAdapter(products, getContext()));
+    private void initAdapter() {
+        binding.recommendedProducts.setAdapter(new ProductAdapter(products, getContext(), this));
         binding.recommendedProducts.setLayoutManager(new GridLayoutManager(getContext(), 2));
     }
 
@@ -73,8 +73,8 @@ public class HomeFragment extends Fragment {
         products.add(new Product("Malm", "Rp. 3.500.000", R.drawable.malm));
     }
 
-    public void initImages(){
-        for (int image: images){
+    public void initImages() {
+        for (int image : images) {
             ImageView view = new ImageView(getContext());
             view.setBackgroundResource(image);
             binding.carousel.addView(view);
@@ -87,5 +87,12 @@ public class HomeFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    @Override
+    public void onClick(Product item) {
+        Intent intent = new Intent(getActivity(), ProductDetail.class);
+        intent.putExtra("product", item);
+        startActivity(intent);
     }
 }

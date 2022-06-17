@@ -20,11 +20,22 @@ public class ProductDetail extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.toolbar);
+        setTitle("Product Detail");
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+
+        Product item = (Product) getIntent().getSerializableExtra("product");
+        binding.productImage.setImageResource(item.getImage());
+        binding.productName.setText(item.getName());
+        binding.productPrice.setText(item.getPrice());
 
         binding.buyButton.setOnClickListener(v -> {
             String inp = binding.quant.getText().toString();
-            int quantity = Integer.parseInt(inp);
+            int quantity = 0;
+            try {
+                quantity = Integer.parseInt(inp);
+            } catch (Exception ignored) {
+
+            }
 
             if (quantity > 0) {
                 successDialog();

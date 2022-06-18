@@ -38,5 +38,6 @@
     <string name="products_quantuty_prompt">How many products do you want to buy?</string>
     <string name="quantity_label">Quantity :</string>
     <string name="buy_now_text">Buy Now</string>
+    <string name="input_hint">1</string>
 
 </resources>

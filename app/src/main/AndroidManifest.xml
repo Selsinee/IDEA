@@ -13,7 +13,7 @@
             android:name=".MainActivity"
             android:exported="true"/>
         <activity
-            android:name=".ProductDetail"
+            android:name=".productdetail.ProductDetail"
             android:exported="true" />
         <activity
             android:name=".login.LoginActivity"

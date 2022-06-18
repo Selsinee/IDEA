@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 
 import com.binus.idea.Product;
 import com.binus.idea.ProductAdapter;
-import com.binus.idea.ProductDetail;
+import com.binus.idea.productdetail.ProductDetail;
 import com.binus.idea.R;
 import com.binus.idea.databinding.FragmentListProductBinding;
 

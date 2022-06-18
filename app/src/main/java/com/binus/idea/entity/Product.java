@@ -1,4 +1,4 @@
-package com.binus.idea;
+package com.binus.idea.entity;
 
 import java.io.Serializable;
 

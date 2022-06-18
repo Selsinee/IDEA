@@ -1,4 +1,4 @@
-package com.binus.idea;
+package com.binus.idea.utilities;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.binus.idea.databinding.ProductItemBinding;
+import com.binus.idea.entity.Product;
 
 import org.jetbrains.annotations.NotNull;
 

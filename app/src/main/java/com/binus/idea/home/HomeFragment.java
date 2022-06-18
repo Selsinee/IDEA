@@ -16,8 +16,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 
-import com.binus.idea.Product;
-import com.binus.idea.ProductAdapter;
+import com.binus.idea.entity.Product;
+import com.binus.idea.utilities.ProductAdapter;
 import com.binus.idea.productdetail.ProductDetail;
 import com.binus.idea.R;
 import com.binus.idea.databinding.FragmentHomeBinding;

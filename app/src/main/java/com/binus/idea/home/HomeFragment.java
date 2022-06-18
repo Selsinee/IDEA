@@ -68,9 +68,12 @@ public class HomeFragment extends Fragment implements ProductAdapter.OnItemClick
     private void populateData() {
         products.add(new Product("Hemlingby", "Rp. 1.875.000", R.drawable.hemlingby));
         products.add(new Product("Strandmon", "Rp. 2.000.000", R.drawable.strandmon));
-        products.add(new Product("Malm", "Rp. 3.500.000", R.drawable.malm));
-        products.add(new Product("Malm", "Rp. 3.500.000", R.drawable.malm));
-        products.add(new Product("Malm", "Rp. 3.500.000", R.drawable.malm));
+        products.add(new Product("HORNAVAN", "Rp 199.000", R.drawable.hornavan));
+        products.add(new Product("RÅSKOG", "Rp 699.000", R.drawable.raskog));
+        products.add(new Product("TVÄLLEN / ENHET", "Rp 3.999.000", R.drawable.tvallen));
+        products.add(new Product("LACK", "Rp 899.000", R.drawable.lack));
+        products.add(new Product("KNOXHULT", "Rp 2.750.000", R.drawable.knoxhult));
+        products.add(new Product("SVENARUM", "Rp 2.799.000", R.drawable.svenarum));
     }
 
     public void initImages() {

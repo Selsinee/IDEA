@@ -90,19 +90,19 @@ public class ProductListFragment extends Fragment implements ProductAdapter.OnIt
             products.add(new Product("LACK", "Rp 899.000", R.drawable.lack));
             products.add(new Product("SVENARUM", "Rp 2.799.000", R.drawable.svenarum));
         } else if (tabName.equalsIgnoreCase("kitchen")){
-            products.add(new Product("HEMLINGBY", "Rp. 1.875.000", R.drawable.hemlingby));
-            products.add(new Product("STRANDMON", "Rp. 2.000.000", R.drawable.strandmon));
-            products.add(new Product("HEMNES", "Rp. 4.499.000", R.drawable.hemnes));
-            products.add(new Product("LINANÄS", "Rp 3.495.000", R.drawable.linns));
-            products.add(new Product("LACK", "Rp 899.000", R.drawable.lack));
-            products.add(new Product("SVENARUM", "Rp 2.799.000", R.drawable.svenarum));
+            products.add(new Product("TORNVIKEN", "Rp 6.999.000", R.drawable.tornviken));
+            products.add(new Product("STENSTORP", "Rp 3.999.000", R.drawable.stenstorp));
+            products.add(new Product("GRUBBAN", "Rp 279.000", R.drawable.grubban));
+            products.add(new Product("KNOXHULT", "Rp 2.750.000", R.drawable.knoxhult));
+            products.add(new Product("GRILLSKÄR", "Rp 3.375.000", R.drawable.grillskar));
+            products.add(new Product("RÅSKOG", "Rp 699.000", R.drawable.raskog));
         } else {
-            products.add(new Product("HEMLINGBY", "Rp. 1.875.000", R.drawable.hemlingby));
-            products.add(new Product("STRANDMON", "Rp. 2.000.000", R.drawable.strandmon));
-            products.add(new Product("HEMNES", "Rp. 4.499.000", R.drawable.hemnes));
-            products.add(new Product("LINANÄS", "Rp 3.495.000", R.drawable.linns));
-            products.add(new Product("LACK", "Rp 899.000", R.drawable.lack));
-            products.add(new Product("SVENARUM", "Rp 2.799.000", R.drawable.svenarum));
+            products.add(new Product("HORNAVAN", "Rp 199.000", R.drawable.hornavan));
+            products.add(new Product("TVÄLLEN / ENHET", "Rp 3.999.000", R.drawable.tvallen));
+            products.add(new Product("GODMORGON", "Rp 4.195.000", R.drawable.godmogron));
+            products.add(new Product("RÖNNSKÄR", "Rp 649.000", R.drawable.ronnskar));
+            products.add(new Product("ROCKÅN", "Rp 499.000", R.drawable.rockan));
+            products.add(new Product("EFTERTRÄDA", "Rp 249.000", R.drawable.eftertrada));
         }
 
     }
